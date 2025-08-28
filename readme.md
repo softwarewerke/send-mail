@@ -10,6 +10,8 @@ This tool is intentionally compiled with JDK 1.8 and runs on any Java 1.8 or hig
 
 Send e-mails configured in the application.properties file, command line args or environment variables.
 
-    java -jar send-mail.jar [option] config-file
+    java -jar send-mail.jar [options]
+
+Run without options to get help message.
 
 ## Known issues

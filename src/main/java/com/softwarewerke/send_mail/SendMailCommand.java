@@ -23,6 +23,12 @@ public class SendMailCommand implements Runnable {
     @Autowired
     private JavaMailSender mailSender;
 
+    @CommandLine.Option(names = {"--debug"}, description = "Enable debug mode")
+    private boolean debug;
+
+    @CommandLine.Option(names = {"--"}, description = "Read message body from stdin")
+    private boolean readStdin;
+
     @CommandLine.Option(names = {"-C"}, description = "Print example configuration and exit")
     private boolean printConfig;
 
@@ -60,7 +66,7 @@ public class SendMailCommand implements Runnable {
             return;
         }
 
-        String stdinText = readStdin();
+        String stdinText = readStdin ? readStdin() : null;
         sendMail(stdinText);
     }
 
