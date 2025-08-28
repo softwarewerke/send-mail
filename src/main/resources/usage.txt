@@ -1,0 +1,5 @@
+
+Usage: java -jar send-mail.jar [--name|--name=arg]
+
+--usage, -u, --help, -h     : Print this help message and exit.
+
